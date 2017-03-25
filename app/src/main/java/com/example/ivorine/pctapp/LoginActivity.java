@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         FirebaseApp.initializeApp(this);
 
         mSubmitButton=(Button) findViewById(R.id.submitButton);
-        mPasswordField=(EditText) findViewById(R.id.emailField);
+        mPasswordField=(EditText) findViewById(R.id.passwordField);
         mEmailField=(EditText) findViewById(R.id.emailField);
        // mStatusTextView=(TextView) findViewById(R.id.text_empty_message);
         mSubmitButton.setOnClickListener(this);

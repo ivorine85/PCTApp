@@ -17,7 +17,7 @@
         android:text="Login" />
 
     <EditText
-        android:id="@+id/emailField"
+        android:id="@+id/passwordField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -25,17 +25,17 @@
         android:inputType="textPassword"
         android:layout_marginBottom="32dp"
         android:layout_above="@+id/submitButton"
-        android:layout_alignLeft="@+id/passwordField"
-        android:layout_alignStart="@+id/passwordField" />
+        android:layout_alignLeft="@+id/emailField"
+        android:layout_alignStart="@+id/emailField" />
 
     <EditText
-        android:id="@+id/passwordField"
+        android:id="@+id/emailField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
-        android:layout_above="@+id/emailField"
+        android:layout_above="@+id/passwordField"
         android:layout_centerHorizontal="true" />
 
     <ImageView
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/phichitheta_coa"
         android:layout_marginBottom="30dp"
-        android:layout_above="@+id/passwordField"
+        android:layout_above="@+id/emailField"
         android:layout_centerHorizontal="true" />
 
 
