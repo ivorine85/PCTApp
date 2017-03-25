@@ -30,4 +30,10 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
+    <Home
+        android:id="@+id/Home"
+        android:layout_width="107dp"
+        android:layout_height="60dp"
+        android:text="Home" />
+
 </android.support.design.widget.CoordinatorLayout>
