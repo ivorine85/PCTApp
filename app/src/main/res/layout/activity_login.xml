@@ -7,7 +7,7 @@
     tools:context="com.example.ivorine.pctapp.LoginActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -19,32 +19,24 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="82dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:layout_above="@+id/submitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="94dp" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:layout_above="@+id/editText"
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/phichitheta_coa"
-        android:layout_above="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp" />
 
 
 </RelativeLayout>
