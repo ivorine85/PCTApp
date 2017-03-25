@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "975356721925",
+    "firebase_url": "https://pctapp-e9144.firebaseio.com",
+    "project_id": "pctapp-e9144",
+    "storage_bucket": "pctapp-e9144.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975356721925:android:77360873d29b0d3b",
+        "android_client_info": {
+          "package_name": "com.example.ivorine.pctapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975356721925-oeiklfut08uaa1sn3i2o857o5qcejve4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ivorine.pctapp",
+            "certificate_hash": "e7227ded2415d7fbf1e6505f6259da62f1e061dd"
+          }
+        },
+        {
+          "client_id": "975356721925-g70t7p6dpq0raiaq7flmt3h4ip51ccem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8wGFO93cUa-sBSLm2Jpzb0-AgsGqIRis"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975356721925-g70t7p6dpq0raiaq7flmt3h4ip51ccem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
