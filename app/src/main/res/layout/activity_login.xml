@@ -10,10 +10,10 @@
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="188dp" />
+        android:layout_marginBottom="188dp"
+        android:text="Login" />
 
     <EditText
         android:id="@+id/editText"
@@ -22,21 +22,29 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:layout_marginBottom="32dp"
         android:layout_above="@+id/submitButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="94dp" />
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:layout_above="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/phichitheta_coa"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/editText2"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
