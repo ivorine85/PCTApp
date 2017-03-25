@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -67,10 +68,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        FirebaseApp.initializeApp(this);
 
         mSubmitButton=(Button) findViewById(R.id.submitButton);
+        mPasswordField=(EditText) findViewById(R.id.emailField);
+        mEmailField=(EditText) findViewById(R.id.emailField);
+       // mStatusTextView=(TextView) findViewById(R.id.text_empty_message);
         mSubmitButton.setOnClickListener(this);
-
+        mAuth=FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -79,6 +84,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    Toast.makeText(LoginActivity.this, R.string.auth_succeed,
+                            Toast.LENGTH_SHORT).show();
 
                 } else {
                     // User is signed out
@@ -128,9 +135,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         }
 
                         // [START_EXCLUDE]
-                        if (!task.isSuccessful()) {
-                            mStatusTextView.setText(R.string.auth_failed);
-                        }
+//                        if (!task.isSuccessful()) {
+//                            mStatusTextView.setText(getString(R.string.auth_failed));
+//                        }
                         // [END_EXCLUDE]
                     }
                 });
