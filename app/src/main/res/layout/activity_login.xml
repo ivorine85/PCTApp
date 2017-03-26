@@ -17,6 +17,16 @@
         android:text="Login" />
 
     <EditText
+        android:id="@+id/emailField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/passwordField"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
         android:id="@+id/passwordField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,15 +38,6 @@
         android:layout_alignLeft="@+id/emailField"
         android:layout_alignStart="@+id/emailField" />
 
-    <EditText
-        android:id="@+id/emailField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:layout_above="@+id/passwordField"
-        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/imageView"

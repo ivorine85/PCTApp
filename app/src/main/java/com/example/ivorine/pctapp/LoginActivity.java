@@ -1,5 +1,6 @@
 package com.example.ivorine.pctapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -63,7 +64,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //        mAuth = FirebaseAuth.getInstance();
 
 
-//       }
+    //       }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +74,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mSubmitButton=(Button) findViewById(R.id.submitButton);
         mPasswordField=(EditText) findViewById(R.id.passwordField);
         mEmailField=(EditText) findViewById(R.id.emailField);
-       // mStatusTextView=(TextView) findViewById(R.id.text_empty_message);
+        // mStatusTextView=(TextView) findViewById(R.id.text_empty_message);
         mSubmitButton.setOnClickListener(this);
         mAuth=FirebaseAuth.getInstance();
 
@@ -84,8 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    Toast.makeText(LoginActivity.this, R.string.auth_succeed,
-                            Toast.LENGTH_SHORT).show();
+
 
                 } else {
                     // User is signed out
@@ -132,6 +132,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
+                        }
+                        if (task.isSuccessful()) {
+                            Toast.makeText(LoginActivity.this, R.string.auth_succeed,
+                                    Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
                         }
 
                         // [START_EXCLUDE]
