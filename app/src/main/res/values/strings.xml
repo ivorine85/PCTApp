@@ -9,5 +9,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_jobs">Jobs</string>
     <string name="title_activity_brothers">Brothers</string>
+    <string name="title_login">Login</string>
 
 </resources>
