@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mGoToLogin;
+    private Button mGoToLogin, Events, Brothers, Jobs, Home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mGoToLogin= (Button) findViewById(R.id.Login);
         mGoToLogin.setOnClickListener(this);
 
+        Events = (Button) findViewById(R.id.Events);
+        Events.setOnClickListener(this);
 
+        Brothers = (Button) findViewById(R.id.Brothers);
+        Brothers.setOnClickListener(this);
+
+        Jobs = (Button) findViewById(R.id.Jobs);
+        Jobs.setOnClickListener(this);
+
+        Home = (Button) findViewById(R.id.Home);
+        Home.setOnClickListener(this);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -61,5 +71,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
+        else if (i== R.id.Events) {
+            Intent intent = new Intent(this, Events.class);
+            startActivity(intent);
+        }
+        else if (i== R.id.Jobs) {
+            Intent intent = new Intent(this, Jobs.class);
+            startActivity(intent);
+        }
+        else if (i== R.id.Brothers) {
+            Intent intent = new Intent(this, Brothers.class);
+            startActivity(intent);
+        }
+        else if (i== R.id.Home) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
+
 }
